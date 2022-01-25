@@ -1,1 +1,0 @@
-# group6-demo
