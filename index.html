@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +21,16 @@
       </p>
       
       <div class="columns search-button pt-4 subtitle buttons is-centered">
-        <input class="input is-medium is-centered" style="width: 33%;" type="text" placeholder="Paris" id="search-bar"><button class="button is-info mt-2 ml-5" id="search-button"> <i class="fas fa-search"></i></button>
+        <label for="country-names">Select a country:</label>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <select>
+            <option value="u.s.a">U.S.A</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+            <option value="france">France</option>
+          </select>
+        </div>
     </div>
     </div>
   </section>
@@ -28,7 +38,7 @@
   <section class="hero is-small is-info">
     <div class="columns hero-body is-centered">
       <h1 class="title-flag">Flag</h1>
-      
+
     </div>
   </section>
 
@@ -42,4 +52,5 @@
   <script src="https://kit.fontawesome.com/d93e5dd24b.js" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
