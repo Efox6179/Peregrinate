@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var getExchangeRate = function(country) {
     var apiUrl = "https://v6.exchangerate-api.com/v6/5b54235bc02a7caa763ae076/pair/USD/" + country;
 
@@ -18,17 +17,17 @@ var getExchangeRate = function(country) {
 };
 
 var returnRate = function(data) {
-    // Code to display rate to user
+    var conversionRate = data.conversion_rate;
+
+    // Code to either return value, or create element in HTML
 };
 
 var handleError = function() {
-    // Do something to handle the error without using prompts/alerts
+    // Code to pass error message back or generate element
 };
-=======
 $(".drop-menu").on("click","a",function() {
    var currency = $(this).attr("currency-code");
    getExchangeRate(currency); 
    var flagCode = $(this).attr("flag-code");
    getFlag(flagCode);
 });
->>>>>>> main
