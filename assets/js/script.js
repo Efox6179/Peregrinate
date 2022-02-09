@@ -36,7 +36,6 @@ var handleError = function() {
 
 $(".dropdown-item").on("click",function() {
    var currency = $(this).attr("data-currency-code");
-   //var exchangeRate = getExchangeRate(currency); 
    $(".exchange-rate-display").text("1 USD = " + getExchangeRate(currency));
    var flagCode = $(this).attr("data-flag-code");
    var countryName = $(this).text().trim();
