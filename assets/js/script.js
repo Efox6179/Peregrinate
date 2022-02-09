@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-var exchangeRateContainerEl = (".exchange-rate-container");
-=======
+var exchangeRateDisplayEl = document.querySelector(".exchange-rate-display");
 var flagCodesObject;
->>>>>>> 8db4221b5e2a3c34ac5fe76591fbc22e393e7b5f
 
 var dropdown = document.querySelector('.dropdown');
 dropdown.addEventListener('click', function(event) {
@@ -29,48 +26,39 @@ var getExchangeRate = function(currency) {
 };
 
 var returnRate = function(data) {
-    // Clear old content
-    exchangeRateContainerEl.textContent = "";
-
+    exchangeRateDisplayEl.textContent = "";
+    console.log(data);
     var conversionRate = data.conversion_rate;
+    var targetCode = data.target_code
     var rateEl = document.createElement("p");
-    rateEl.textContent = "Conversion Rate: " + conversionRate;
+    rateEl.textContent = "1 USD = " + conversionRate + " " + targetCode;
 
-    exchangeRateContainerEl.appendChild(rateEl);
+    exchangeRateDisplayEl.appendChild(rateEl);
 };
 
 var handleError = function() {
-    // Clear old content
-    exchangeRateContainerEl.textContent = "";
+    // Clear default text before displaying error
+    exchangeRateDisplayEl.textContent = ""
+
     var errorEl = document.createElement("p");
     errorEl.textContent = "Error accessing exchange rate API, please try your request again later.";
 
-    exchangeRateContainerEl.appendChild(errorEl);
+    exchangeRateDisplayEl.appendChild(errorEl);
 };
 
-<<<<<<< HEAD
-$(".drop-menu").on("click","a",function() {
-   var currency = $(this).attr("currency-code");
-   getExchangeRate(currency); 
-   var flagCode = $(this).attr("flag-code");
-   getFlag(flagCode/*, country name for the alt attribute*/);
-=======
 $(".dropdown-item").on("click",function() {
    var currency = $(this).attr("data-currency-code");
    //var exchangeRate = getExchangeRate(currency); 
-   $(".exchange-rate-display").text("1 USD = " + getExchangeRate(currency));
+   getExchangeRate(currency);
    var flagCode = $(this).attr("data-flag-code");
    var countryName = $(this).text().trim();
    console.log(currency);
    console.log(flagCode);
    console.log(countryName);
    getFlag(flagCode, countryName);
->>>>>>> 8db4221b5e2a3c34ac5fe76591fbc22e393e7b5f
 });
 
 function getFlag(flagCode, countryName) {
    $(".flag-img").attr("src",`https://flagcdn.com/${flagCode}.svg`);
    $(".flag-img").attr("alt",countryName + "'s flag");
 }
-
-
