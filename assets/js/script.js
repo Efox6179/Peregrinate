@@ -1,4 +1,4 @@
-
+var exchangeRateContainerEl = (".exchange-rate-container");
 
 var dropdown = document.querySelector('.dropdown');
 dropdown.addEventListener('click', function(event) {
@@ -6,8 +6,8 @@ dropdown.addEventListener('click', function(event) {
   dropdown.classList.toggle('is-active');
 });
 
-var getExchangeRate = function(country) {
-    var apiUrl = "https://v6.exchangerate-api.com/v6/5b54235bc02a7caa763ae076/pair/USD/" + country;
+var getExchangeRate = function(currency) {
+    var apiUrl = "https://v6.exchangerate-api.com/v6/5b54235bc02a7caa763ae076/pair/USD/" + currency;
 
     fetch (apiUrl)
         .then(function(response) {
@@ -25,14 +25,25 @@ var getExchangeRate = function(country) {
 };
 
 var returnRate = function(data) {
-    var conversionRate = data.conversion_rate;
+    // Clear old content
+    exchangeRateContainerEl.textContent = "";
 
-    // Code to either return value, or create element in HTML
+    var conversionRate = data.conversion_rate;
+    var rateEl = document.createElement("p");
+    rateEl.textContent = "Conversion Rate: " + conversionRate;
+
+    exchangeRateContainerEl.appendChild(rateEl);
 };
 
 var handleError = function() {
-    // Code to pass error message back or generate element
+    // Clear old content
+    exchangeRateContainerEl.textContent = "";
+    var errorEl = document.createElement("p");
+    errorEl.textContent = "Error accessing exchange rate API, please try your request again later.";
+
+    exchangeRateContainerEl.appendChild(errorEl);
 };
+
 $(".drop-menu").on("click","a",function() {
    var currency = $(this).attr("currency-code");
    getExchangeRate(currency); 
