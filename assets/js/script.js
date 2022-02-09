@@ -1,4 +1,4 @@
-
+var flagCodesObject;
 
 var dropdown = document.querySelector('.dropdown');
 dropdown.addEventListener('click', function(event) {
@@ -33,16 +33,22 @@ var returnRate = function(data) {
 var handleError = function() {
     // Code to pass error message back or generate element
 };
-$(".drop-menu").on("click","a",function() {
-   var currency = $(this).attr("currency-code");
-   getExchangeRate(currency); 
-   var flagCode = $(this).attr("flag-code");
-   getFlag(flagCode/*, country name for the alt attribute*/);
+
+$(".dropdown-item").on("click",function() {
+   var currency = $(this).attr("data-currency-code");
+   //var exchangeRate = getExchangeRate(currency); 
+   $(".exchange-rate-display").text("1 USD = " + getExchangeRate(currency));
+   var flagCode = $(this).attr("data-flag-code");
+   var countryName = $(this).text().trim();
+   console.log(currency);
+   console.log(flagCode);
+   console.log(countryName);
+   getFlag(flagCode, countryName);
 });
 
-function getFlag(flagCode) {
+function getFlag(flagCode, countryName) {
    $(".flag-img").attr("src",`https://flagcdn.com/${flagCode}.svg`);
-   //$(".flag-img").attr("alt",countryName);
+   $(".flag-img").attr("alt",countryName + "'s flag");
 }
 
 
