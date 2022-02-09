@@ -21,19 +21,32 @@
         Enter a city to get started!
       </p>
 
-      <div class="columns search-button pt-4 subtitle buttons is-centered">
-        <label for="country-names">Select a country:</label>
-        <div class="dropdown-menu" id="dropdown-menu">
-          <select>
-            <option value="u.s.a">U.S.A</option>
-            <option value="hawaii">Hawaii</option>
-            <option value="brazil">Brazil</option>
-            <option value="canada">Canada</option>
-            <option value="france">France</option>
-          </select>
+      <div class="dropdown is-active">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span>Country</span>
+            <span class="icon is-small">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">
+              U.S.A
+            </a>
+            <a class="dropdown-item">
+              Canada
+            </a>
+            <a href="#" class="dropdown-item">
+              Japan
+            </a>
+            <a href="#" class="dropdown-item">
+              France
+            </a>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <section class="hero is-small is-info">
