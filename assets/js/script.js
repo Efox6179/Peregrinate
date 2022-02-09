@@ -1,3 +1,11 @@
+
+
+var dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('click', function(event) {
+  event.stopPropagation();
+  dropdown.classList.toggle('is-active');
+});
+
 var getExchangeRate = function(country) {
     var apiUrl = "https://v6.exchangerate-api.com/v6/5b54235bc02a7caa763ae076/pair/USD/" + country;
 
@@ -36,3 +44,5 @@ function getFlag(flagCode) {
    $(".flag-img").attr("src",`https://flagcdn.com/${flagCode}.svg`);
    //$(".flag-img").attr("alt",countryName);
 }
+
+
