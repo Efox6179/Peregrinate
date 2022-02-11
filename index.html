@@ -2,107 +2,109 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peregrinate</title>
-<link rel="stylesheet" href="./assets/css/style.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"/>
-</head><script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peregrinate</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
 <body>
-<header class="header" class="level">
-<p class="heading level-item has-text-info has-background-white is-size-1">Peregrinate<i class=" fas fa-map"></i></p>
-</header>
+  <header class="header" class="level">
+    <p class="heading level-item has-text-info has-background-white is-size-1">Peregrinate <i class= " fas fa-map"></i>
+    </p>
+  </header>
 
-<section class="hero is-medium is-info level-item">
-<div class="hero-body">
-<p class="title has-text-centered pb-5">
-Select a country to get started!
-</p>
+  <section class="hero is-medium is-info level-item">
+    <div class="hero-body">
+      <p class="title has-text-centered pb-5">
+        Select a country to get started!
+      </p>
 
-<div class="dropdown level-item">
-<div class="dropdown-trigger">
-<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-<span>Countries</span>
-<span class="icon is-small">
-<i class="fas fa-angle-down" aria-hidden="true"></i>
-</span>
-</button>
-</div>
-<div class="dropdown-menu" id="dropdown-menu" role="menu">
-<div class="dropdown-content level-item">
-<a class="dropdown-item" data-currency-code="GBP" data-flag-code="gb" id="">
-United Kingdom
-</a>
-<a class="dropdown-item" data-currency-code="CAD" data-flag-code="ca" id="">
-Canada
-</a>
-<a class="dropdown-item" data-currency-code="MXN" data-flag-code="mx" id="">
-Mexico
-</a>
-<a class="dropdown-item" data-currency-code="EUR" data-flag-code="eu" id="">
-European Union
-</a>
-<a class="dropdown-item" data-currency-code="RUB" data-flag-code="ru" id="">
-Russia
-</a>
-<a class="dropdown-item" data-currency-code="BRL" data-flag-code="br" id="">
-Brazil
-</a>
-<a class="dropdown-item" data-currency-code="AUD" data-flag-code="au" id="">
-Australia
-</a>
-<a class="dropdown-item" data-currency-code="PEN" data-flag-code="pe" id="">
-Peru
-</a>
-<a class="dropdown-item" data-currency-code="ZAR" data-flag-code="za" id="">
-South Africa
-</a>
-<a class="dropdown-item" data-currency-code="IDR" data-flag-code="id" id="">
-Indonesia
-</a>
-<a class="dropdown-item" data-currency-code="CNY" data-flag-code="cn" id="">
-China
-</a>
-<a class="dropdown-item" data-currency-code="JPY" data-flag-code="jp" id="">
-Japan
-</a>
-<a class="dropdown-item" data-currency-code="KRW" data-flag-code="kr" id="">
-South Korea
-</a>
-<a class="dropdown-item" data-currency-code="DKK" data-flag-code="dk" id="">
-Denmark
-</a>
-<a class="dropdown-item" data-currency-code="SEK" data-flag-code="se" id="">
-Sweden
-</a>
+      <div class="dropdown level-item">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span>Countries</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content level-item">
+            <a class="dropdown-item" data-currency-code="GBP" data-flag-code="gb" id="">
+              United Kingdom
+            </a>
+            <a class="dropdown-item" data-currency-code="CAD" data-flag-code="ca" id="">
+              Canada
+            </a>
+            <a class="dropdown-item" data-currency-code="MXN" data-flag-code="mx" id="">
+              Mexico
+            </a>
+            <a class="dropdown-item" data-currency-code="EUR" data-flag-code="eu" id="">
+              European Union
+            </a>
+            <a class="dropdown-item" data-currency-code="RUB" data-flag-code="ru" id="">
+              Russia
+            </a>
+            <a class="dropdown-item" data-currency-code="BRL" data-flag-code="br" id="">
+              Brazil
+            </a>
+            <a class="dropdown-item" data-currency-code="AUD" data-flag-code="au" id="">
+              Australia
+            </a>
+            <a class="dropdown-item" data-currency-code="PEN" data-flag-code="pe" id="">
+              Peru
+            </a>
+            <a class="dropdown-item" data-currency-code="ZAR" data-flag-code="za" id="">
+              South Africa
+            </a>
+            <a class="dropdown-item" data-currency-code="IDR" data-flag-code="id" id="">
+              Indonesia
+            </a>
+            <a class="dropdown-item" data-currency-code="CNY" data-flag-code="cn" id="">
+              China
+            </a>
+            <a class="dropdown-item" data-currency-code="JPY" data-flag-code="jp" id="">
+              Japan
+            </a>
+            <a class="dropdown-item" data-currency-code="KRW" data-flag-code="kr" id="">
+              South Korea
+            </a>
+            <a class="dropdown-item" data-currency-code="DKK" data-flag-code="dk" id="">
+              Denmark
+            </a>
+            <a class="dropdown-item" data-currency-code="SEK" data-flag-code="se" id="">
+              Sweden
+            </a>
 
 
-</div>
-</div>
-</div>
+          </div>
+        </div>
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
-<section class="hero is-small is-info ">
-<div class="columns hero-body is-centered">
-<h1 class="title-flag is-size-2">Flag</h1>
-</div>
-<div><img class="flag-img" src="https://flagcdn.com/us.svg" alt="United States's flag"/></div>
-</section>
+  <section class="hero is-small is-info ">
+    <div class="columns hero-body is-centered">
+      <h1 class="title-flag is-size-2">Flag</h1>
+    </div>
+    <div><img class="flag-img" src="https://flagcdn.com/us.svg" alt="United States's flag" /></div>
+  </section>
 
-<section class="hero is-medium is-info">
-<div class="columns hero-body is-centered">
+  <section class="hero is-medium is-info">
+    <div class="columns hero-body is-centered">
 
-<h2 class="exchange-rate">Exchange Rate</h2>
-<p class="exchange-rate-display"></p>
-</div>
-</section>
+      <h2 class="exchange-rate">Exchange Rate</h2>
+      <p class="exchange-rate-display"></p>
+    </div>
+  </section>
 
-<script src="https://kit.fontawesome.com/d93e5dd24b.js" crossorigin="anonymous"></script>
-<script src="./assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/d93e5dd24b.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
-
