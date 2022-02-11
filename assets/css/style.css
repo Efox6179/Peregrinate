@@ -5,7 +5,7 @@
   border: 1px solid black;
   cursor: pointer;
   border-radius: 5px;
-  
+  left: auto;
   }
   
   .dropdown-menu:focus,
@@ -35,15 +35,24 @@
   
   .exchange-rate{
   padding-right: 5px;
+  text-align: center;
+  font-weight: bold;
   }
+
+  .exchange-rate-display{
+    text-align: center;
+    font-weight: bold;
+  }
+
   .hero{
-  padding-bottom: 70px;
+  padding-bottom: 30px;
   }
   
   .flag-img{
-  width: 600px;
-  height: 600px;
+  width: 40rem;
+  height: 30rem;
   margin-left: auto;
   margin-right: auto;
   display: block;
   }
+
